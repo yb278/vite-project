@@ -1,0 +1,18 @@
+// Custom.scss
+
+// Option A: Include Bootstrap with custom variable overrides
+// Set the primary color to orange
+$primary: #FFA500; // Set orange as the primary color
+
+// Optionally, you can change other colors as well:
+$secondary: #FF4500; // Darker shade of orange for secondary elements
+
+$light: #f8f9fa;    // Light background color
+$dark: #343a40;     // Dark background color
+
+// Import Bootstrap's core styles after setting the theme variables
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// You can add additional custom code or styles below
+

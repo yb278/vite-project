@@ -1,0 +1,16 @@
+
+.carousel-img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover; /* Ensures the image fills the dimensions without distortion */
+}
+
+.right_header {
+    float: right;
+}
+
+.center_header {
+    float: center;
+    text-align: center;
+}
+
