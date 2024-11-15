@@ -1,4 +1,4 @@
-# 🚗 React Skills Practice with a Car Enthusiast Twist
+# React Skills Practice
 
 Welcome to the **Vite React Project**! This project is designed to **sharpen my React skills** while showcasing my passion for **cars**. Built with the lightning-fast Vite build tool, this project is a fun way to dive deep into React development and explore automotive-related content through a tech lens. 🚀
 
