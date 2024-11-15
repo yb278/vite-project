@@ -88,3 +88,44 @@ Cars are more than just vehicles—they’re an expression of art, engineering, 
 - **User Profiles**: Allow users to save their favorite cars and brands.
 - **Car Comparisons**: Create an interactive comparison tool for different car models.
 
+---
+## 📦 Package Versions
+
+Here is a list of the packages used in this project along with their respective versions:
+
+### Dependencies
+
+| Package               | Version  |
+|-----------------------|----------|
+| **@sendgrid/mail**    | ^8.1.4   |
+| **@types/jest**       | ^29.5.14 |
+| **@types/node**       | ^22.9.0  |
+| **bootstrap**         | ^5.3.3   |
+| **bootstrap-icons**   | ^1.11.3  |
+| **react**             | ^18.3.1  |
+| **react-dom**         | ^18.3.1  |
+| **react-router-dom**  | ^6.28.0  |
+| **typescript**        | ^5.6.3   |
+
+
+---
+
+### DevDependencies
+
+| Package                        | Version  |
+|--------------------------------|----------|
+| **@eslint/js**                 | ^9.13.0  |
+| **@types/react**               | ^18.3.12 |
+| **@types/react-dom**           | ^18.3.1  |
+| **@vitejs/plugin-react**       | ^4.3.3   |
+| **eslint**                     | ^9.13.0  |
+| **eslint-plugin-react**        | ^7.37.2  |
+| **eslint-plugin-react-hooks**  | ^5.0.0   |
+| **eslint-plugin-react-refresh**| ^0.4.14  |
+| **globals**                    | ^15.11.0 |
+| **sass-embedded**              | ^1.81.0  |
+| **vite**                       | ^5.4.10  |
+
+---
+
+This section provides transparency about the libraries used, making it easier for others to understand the environment and dependencies of the project.
