@@ -1,5 +1,6 @@
 function Accordion(){
     return(
+      <>
         <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
@@ -38,6 +39,8 @@ function Accordion(){
           </div>
         </div>
       </div>
+
+      </>
     );
 }
 
