@@ -15,7 +15,7 @@ function Checkbox(){
                         <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio"/>
                         <label class="form-check-label stretched-link" for="thirdRadio">G81 M4</label>
                     </li>
-                </ul>
+                </ul>                
         </>
     );
 }

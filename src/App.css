@@ -20,3 +20,491 @@
     left: 0; 
     z-index: 10;
 }
+
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+  }
+  
+  .sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* .switch:hover */.sun svg {
+    animation: rotate 15s linear infinite;
+  }
+  
+  @keyframes rotate {
+   
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* .switch:hover */.moon svg {
+    animation: tilt 5s linear infinite;
+  }
+  
+  @keyframes tilt {
+   
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-10deg);
+    }
+  
+    75% {
+      transform: rotate(10deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .input:checked + .slider {
+    background-color: #183153;
+  }
+  
+  .input:focus + .slider {
+    box-shadow: 0 0 1px #183153;
+  }
+  
+  .input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+
+  /* From Uiverse.io by LeonKohli */ 
+.radio {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row-reverse;
+  }
+  
+  .radio > input {
+    position: absolute;
+    appearance: none;
+  }
+  
+  .radio > label {
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .radio > label > svg {
+    fill: #666;
+    transition: fill 0.3s ease;
+  }
+  
+  .radio > label::before,
+  .radio > label::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #ff9e0b;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease;
+    animation: particle-explosion 1s ease-out;
+  }
+  
+  .radio > label::before {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+  }
+  
+  .radio > label::after {
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+  }
+  
+  .radio > label:hover::before,
+  .radio > label:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.5);
+  }
+  
+  .radio > label:hover {
+    transform: scale(1.2);
+    animation: pulse 0.6s infinite alternate;
+  }
+  
+  .radio > label:hover > svg,
+  .radio > label:hover ~ label > svg {
+    fill: #ff9e0b;
+    filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+    animation: shimmer 1s ease infinite alternate;
+  }
+  
+  .radio > input:checked + label > svg,
+  .radio > input:checked + label ~ label > svg {
+    fill: #ff9e0b;
+    filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+    animation: pulse 0.8s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes particle-explosion {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      filter: drop-shadow(0 0 10px rgba(255, 158, 11, 0.5));
+    }
+    100% {
+      filter: drop-shadow(0 0 20px rgba(255, 158, 11, 1));
+    }
+  }
+  
+  .radio > input:checked + label:hover > svg,
+  .radio > input:checked + label:hover ~ label > svg {
+    fill: #e58e09;
+  }
+  
+  .radio > label:hover > svg,
+  .radio > label:hover ~ label > svg {
+    fill: #ff9e0b;
+  }
+  
+  .radio input:checked ~ label svg {
+    fill: #ffa723;
+  }
+  
+  /* From Uiverse.io by m1her */ 
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+  }
+  
+  .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 2em;
+    width: 2em;
+    border: 4px solid #7b68ee;
+    border-radius: 999px;
+  }
+  
+  .container input:checked ~ .checkmark {
+    animation:
+      bounce 2s ease,
+      checkBorder 1s ease;
+  }
+  
+  .mark {
+    position: absolute;
+    width: 0rem;
+    height: 0rem;
+    background-color: #7b68ee;
+    border-radius: 999px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  
+  .container input:checked ~ .checkmark .mark {
+    background-color: #7b68ee;
+    height: 2.1rem;
+    width: 2.1rem;
+    animation: bounce2 1s ease;
+  }
+  
+  .container input:not(:checked) ~ .checkmark .mark {
+    width: 0rem;
+    height: 0rem;
+    transition: all 0.1s linear;
+  }
+  
+  @keyframes bounce {
+    0%,
+    25%,
+    60%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    20% {
+      transform: translateY(-10px);
+    }
+  
+    35% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @keyframes bounce2 {
+    0% {
+      height: 0rem;
+      width: 0rem;
+      transform: translate(-50%, 0);
+    }
+  
+    10% {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+  
+    25% {
+      height: 1.9rem;
+    }
+  
+    50% {
+      height: 1.2rem;
+      transform: translate(-50%, -150px);
+    }
+  
+    75% {
+      height: 1.9rem;
+    }
+  
+    85% {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+  
+    95% {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+  
+  @keyframes checkBorder {
+    0%,
+    100% {
+      border: 4px solid #7b68ee;
+    }
+  
+    1% {
+      border: 2px solid #7b68ee;
+    }
+  
+    90% {
+      border: 2px solid #7b68ee;
+    }
+  }
+  /* From Uiverse.io by Praashoo7 */ 
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  .up {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  
+  .down {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  
+  .card1 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 90px 5px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .instagram {
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    fill: #cc39a4;
+  }
+  
+  .card2 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 90px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .twitter {
+    margin-top: 1.5em;
+    margin-left: -.9em;
+    fill: #03A9F4;
+  }
+  
+  .card3 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 90px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .github {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+  }
+  
+  .card4 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 90px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .discord {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: #8c9eff;
+  }
+  
+  .card1:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #cc39a4;
+  }
+  
+  .card1:hover .instagram {
+    fill: white;
+  }
+  
+  .card2:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #03A9F4;
+  }
+  
+  .card2:hover .twitter {
+    fill: white;
+  }
+  
+  .card3:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: black;
+  }
+  
+  .card3:hover .github {
+    fill: white;
+  }
+  
+  .card4:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #8c9eff;
+  }
+  
+  .card4:hover .discord {
+    fill: white;
+  }

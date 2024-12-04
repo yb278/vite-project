@@ -6,6 +6,8 @@ import Email from '../components/Email';
 import Accordion from '../components/Accordion';
 import Navbar from '../components/Navbar';
 import Checkbox from '../components/Checkbox';
+import Rating from '../components/Rating';
+import Socials from '../components/Socials';
 
 export function Home() {
     return (
@@ -15,10 +17,11 @@ export function Home() {
             <br/>
             <Hero/>
             <Darkmode/><br/>
-            <Carousel/><hr/>
+            <hr/><Carousel/><hr/>
             <Accordion/><hr/>
             <Checkbox/><hr/>
-
+            <Rating/>
+            {/* <Socials/> */}
         </>
     );
 }
